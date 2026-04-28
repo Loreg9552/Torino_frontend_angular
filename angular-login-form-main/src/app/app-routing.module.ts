@@ -3,9 +3,11 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from "./home/home.component";
 import { AuthGuard } from "./guards/auth.guard";
 import { LoginComponent } from "./login/login.component";
+import { InformationsComponent } from './informations/informations.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
+  { path: 'info', component: InformationsComponent, canActivate: [AuthGuard] },
   { path: '', component: LoginComponent },
 ];
 

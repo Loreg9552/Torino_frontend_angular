@@ -1,8 +1,21 @@
-<main role="main" class="container">
-  <div class="jumbotron">
-    <h1>Home</h1>
-    <p class="lead">
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam temporibus laborum facere dolor ipsum. Sint est laudantium recusandae labore explicabo, doloribus dolor, corporis, ab laboriosam nam iste quo beatae. Doloremque.
-    </p>
-  </div>
-</main>
+<div class="table-container">
+  <h2>Lista Utenti</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>Lavoro</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let u of utenti">
+        <td>{{ u.id }}</td>
+        <td>{{ u.name }}</td>
+        <td>
+          <span class="badge">{{ u.job }}</span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
